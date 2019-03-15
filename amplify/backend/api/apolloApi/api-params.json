@@ -1,0 +1,34 @@
+{
+    "paths": [
+        {
+            "name": "/graphql",
+            "lambdaFunction": "apollosvr",
+            "privacy": {
+                "open": true
+            }
+        }
+    ],
+    "resourceName": "apolloApi",
+    "apiName": "apolloApi",
+    "functionArns": [
+        {
+            "lambdaFunction": "apollosvr"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "apollo-amplify-20190315133748-authRole",
+        "unAuthRoleName": "apollo-amplify-20190315133748-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "apollosvr",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}
